@@ -1,0 +1,37 @@
+// Font Stacks
+// ===========
+
+@font-family-sans-serif: "Source Sans Pro", "source-sans-pro", "AvenirNext-Medium", Verdana, Segoe, sans-serif;
+@font-family-serif: Georgia, serif;
+@font-family-monospace: "Source Code Pro", "source-code-pro", Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@font-family-base: @font-family-sans-serif;
+@font-family-alternate: @font-family-sans-serif;
+
+// Type size
+// =========
+
+@line-height-base: 1.55;
+
+// Media Queries
+// =============
+
+@screen-small: 23em;
+@screen-medium: 40em;
+@screen-large: 70em;
+
+
+// Colors
+// =============
+@black: #222;
+@white: #FFF;
+
+@color-background: @white;
+@color-text: @black;
+
+// Mixin
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
