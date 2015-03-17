@@ -2,11 +2,11 @@
   "kitten-parade": {
     "title": "Kitten Parade",
     "image": "kitten-parade",
-    "description": "My default description for an article"
+    "description": "Kitten default description for an article"
   },
   "puppy-parade": {
     "title": "Puppy Parade",
     "image": "puppy-parade",
-    "description": "My default description for an article"
+    "description": "Puppy default description for an article"
   }
 }
