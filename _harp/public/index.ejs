@@ -2,8 +2,7 @@
     <% for (var slug in public.articles._data) { %>
     <% var article = public.articles._data[slug] %>
     <div class="the_gnar">
-        <a href="articles/<%= slug %>" class="doom">
-            <img src="http://placekitten.com/g/300/300" width="100%" height="100%" />
+        <a href="articles/<%= slug %>" class="doom <%= article.image %>">
             <div class="pow_pow">
                 <div class="stoked">
                     <h2><%= article.title %></h2>

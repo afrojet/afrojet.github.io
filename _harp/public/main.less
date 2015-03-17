@@ -19,6 +19,7 @@ body {
     height: 100%;
     overflow: auto;
     font-size: 1.25em;
+    background: @white;
 }
 
 article {
@@ -96,15 +97,7 @@ header {
         .heroes_background_image {
             background-size: cover;
             background-position: center;
-
-            &.kitten-parade {
-                height: 360px;
-                background-image: url('http://images6.fanpop.com/image/photos/34800000/Kittens-3-animals-34865509-1680-1050.jpg');
-            }
-            &.puppy-parade {
-                height: 360px;
-                background-image: url('http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/Puppy.jpg');
-            }
+            height: 360px;
         }
     }
 
@@ -159,8 +152,11 @@ h2 {
 }
 
 a.doom {
-    background: #000;
+    display: block;
     padding: 0;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
 
     img {
         display: block;
@@ -230,3 +226,10 @@ a.doom {
         width: 33.333%;
         }
     }
+
+.kitten-parade {
+    background-image: url('http://images6.fanpop.com/image/photos/34800000/Kittens-3-animals-34865509-1680-1050.jpg');
+}
+.puppy-parade {
+    background-image: url('http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/Puppy.jpg');
+}
