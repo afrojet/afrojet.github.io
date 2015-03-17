@@ -23,8 +23,8 @@ body {
 
 article {
     margin: 0 auto;
-    padding: 0em 1.25em 5em 1.25em;
-    max-width: 35em;
+    // padding: 0em 1.25em 5em 1.25em;
+    // max-width: 35em;
 }
 header, h1, h2, h3, h4, h5 {
     font-family: @font-family-header;
@@ -32,28 +32,110 @@ header, h1, h2, h3, h4, h5 {
     margin: 0;
 }
 header {
-    width: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
     color: @black;
     background-color: @white;
+    z-index: 1;
 
-    a {
-        font-size: 125%;
-        color: @black;
-        padding: 10px;
-        line-height: 2.4;
+    .header_wrapper {
+        position: relative;
+
+        .go_home {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+
+            a {
+                display: block;
+                font-size: 125%;
+                color: @black;
+                padding: 20px;
+                line-height: 0;
+            }
+        }
+        .post_title {
+            position: relative;
+            text-align: center;
+
+
+            h1 {
+                font-size: 2em;
+                font-weight: 600;
+                line-height: 1.6;
+
+                .responsive(@screen-small, {
+                    font-size: 1.33em;
+                    font-weight: 600;
+                    line-height: 2.4;
+                });
+            }
+        }
     }
 }
-h1 {
-    font-size: 3em;
+
+.post {
+    position: relative;
+    margin-top: 64px;
+}
+.heroes_get_remembered {
+    margin: 0 auto 54px auto;
+    position: relative;
+
+    .responsive(@screen-small, {
+        margin: 0 auto 34px auto;
+    });
+
+    .heroes_background {
+        display: block;
+        width: 100%;
+        cursor: default;
+
+        .heroes_background_image {
+            background-size: cover;
+            background-position: center;
+
+            &.kitten-parade {
+                height: 360px;
+                background-image: url('http://images6.fanpop.com/image/photos/34800000/Kittens-3-animals-34865509-1680-1050.jpg');
+            }
+            &.puppy-parade {
+                height: 360px;
+                background-image: url('http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/Puppy.jpg');
+            }
+        }
+    }
+
+    .heroes_welcome {
+
+    }
+}
+.legends_never_die {
+    margin: 0 auto;
+    padding: 0em 1.25em 5em 1.25em;
+    max-width: 35em;
+}
+h2 {
+    font-size: 1.66em;
     font-weight: 600;
-    line-height: 0.9;
+    line-height: 1.55;
 
     & + p {
         font-size: 1.33em;
+
+        .responsive(@screen-small, {
+            font-size: 0.93em;
+            });
     }
 
     .responsive(@screen-medium, {
-         font-size: 2em;
+        font-size: 1.66em;
+    });
+    .responsive(@screen-small, {
+        font-size: 1.33em;
+        line-height: 1.33;
     });
 }
 .crushing {

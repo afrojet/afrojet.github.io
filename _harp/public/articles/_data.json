@@ -1,6 +1,12 @@
 {
-  "hello-world": {
-    "title": "The Best",
+  "kitten-parade": {
+    "title": "Kitten Parade",
+    "image": "kitten-parade",
+    "description": "My default description for an article"
+  },
+  "puppy-parade": {
+    "title": "Puppy Parade",
+    "image": "puppy-parade",
     "description": "My default description for an article"
   }
 }
