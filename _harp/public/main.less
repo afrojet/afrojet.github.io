@@ -237,11 +237,23 @@ a.doom {
 .garden {
     width: 82%;
     margin: auto;
-    h1 {}
+    h1 {
+            line-height: 2.05;
+    }
     h2 {}
-    p {}
+
+    .box {
+        font-size: 1.25em;
+        line-height: 1.45;
+
+        &.size {}
+        &.sun {}
+        &.description {}
+    }
+
     .garden_box_container {
         display: block;
+        margin: 20px 0 60px 0;
         table {
             width: 100%;
             height: 400px;
@@ -259,6 +271,7 @@ a.doom {
                         color: @white;
                         font-weight: bold;
                         text-decoration: none;
+                        padding: 0 8px;
 
                         &:hover {
                             background-color: @white;
