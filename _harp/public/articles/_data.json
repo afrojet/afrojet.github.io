@@ -4,9 +4,9 @@
     "image": "kitten-parade",
     "description": "Kitten default description for an article"
   },
-  "puppy-parade": {
-    "title": "Puppy Parade",
-    "image": "puppy-parade",
-    "description": "Puppy default description for an article"
+  "buddyup": {
+    "title": "BuddyUp",
+    "image": "buddyup",
+    "description": "Find Study Partners"
   }
 }
