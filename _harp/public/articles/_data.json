@@ -1,12 +1,47 @@
 {
-  "kitten-parade": {
-    "title": "Kitten Parade",
-    "image": "kitten-parade",
-    "description": "Kitten default description for an article"
-  },
   "buddyup": {
     "title": "BuddyUp",
     "image": "buddyup",
-    "description": "Find Study Partners"
+    "description": "Product strategy, UX / UI design, mobile development, graphic design, user engagement"
+  },
+  "freightliner": {
+    "title": "Freightliner Trucks",
+    "image": "freightliner",
+    "description": "UX / UI design, mobile / web development"
+  },
+  "yeti": {
+    "title": "Yeti Tools",
+    "image": "yeti",
+    "description": "Creative direction, bot design, UX / UI design, iconography"
+  },
+  "block-and-sons": {
+    "title": "Block and Sons Co.",
+    "image": "block-and-sons",
+    "description": "Product strategy, UX / UI design, branding, graphic design, photography, mobile / web development"
+  },
+  "skedco": {
+    "title": "Skedco Rescue Equipment‎",
+    "image": "skedco",
+    "description": "UX / UI design, mobile / web development, product testing"
+  },
+  "bpd": {
+    "title": "BPD",
+    "image": "bpd",
+    "description": "Product strategy, creative direction, UX / UI design, data visualization, app development"
+  },
+  "detroit": {
+    "title": "Detroit ",
+    "image": "detroit",
+    "description": "Custom typface design, UX / UI design, mobile / web development"
+  },
+  "seed": {
+    "title": "Standard Energy Efficiency Data",
+    "image": "seed",
+    "description": "Product strategy, UX / UI design, data visualization, app development"
+  },
+  "about": {
+    "title": "About",
+    "image": "about",
+    "description": "John Skelton"
   }
 }

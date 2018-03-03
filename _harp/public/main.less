@@ -19,7 +19,7 @@ body {
     height: 100%;
     overflow: auto;
     font-size: 1.25em;
-    background: @white;
+    background: @color-background;
 }
 
 article {
@@ -43,10 +43,9 @@ header {
     .header_wrapper {
         position: relative;
 
-        .go_home {
+        .go_home, .about_me {
             position: absolute;
             top: 0;
-            left: 0;
             z-index: 2;
 
             a {
@@ -56,6 +55,12 @@ header {
                 padding: 20px;
                 line-height: 0;
             }
+        }
+        .go_home {
+            left: 0;
+        }
+        .about_me {
+            right: 0;
         }
         .post_title {
             position: relative;
@@ -98,6 +103,32 @@ header {
             background-size: cover;
             background-position: center;
             height: 360px;
+
+            &.tall_image {
+                height: 600px;
+
+                .responsive(@screen-small, {
+                    height: 360px;
+                });
+            }
+            &.about {
+                height: 380px;
+            }
+            &.detroit {
+                .responsive(@screen-small, {
+                    height: 211px;
+                });
+            }
+            &.skedco {
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-color: #121212;
+                height: 430px;
+
+                .responsive(@screen-small, {
+                    height: 259px;
+                });
+            }
         }
     }
 
@@ -116,7 +147,13 @@ h2 {
     line-height: 1.55;
 
     & + p {
-        font-size: 1.33em;
+        font-size: .73em;
+        font-family: @font-family-base;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        /* text-transform: uppercase; */
 
         .responsive(@screen-small, {
             font-size: 0.93em;
@@ -131,6 +168,55 @@ h2 {
         line-height: 1.33;
     });
 }
+p {
+    &.caption {
+        font-size: 0.73em;
+        background-color: whitesmoke;
+        padding: 18px;
+        text-align: center;
+    }
+}
+.ftl-video {
+    width: 640px;
+    height: 512px;
+    .responsive(@screen-medium, {
+        width: 300px;
+        height: 240px;
+    });
+    .responsive(@screen-small, {
+        width: 300px;
+        height: 240px;
+    });
+    }
+.social-icons {
+    a.icon {
+        display: inline-block;
+        border: 2px solid;
+        border-radius: 50%;
+        padding: 5px 10px 6px 10px;
+        color: @color-text;
+        width: 22px;
+        text-align: center;
+        
+        &.behance {
+
+        }
+        &.envelope {
+
+        }
+        &.linkedin {
+
+        }
+        &.twitter {
+
+        }
+        &:hover, &:focus {
+            color: @white;
+            background-color: @color-text;
+            border: 2px solid black;
+        }
+    }    
+}
 .crushing {
       display: -webkit-flex;
       display: flex;
@@ -143,8 +229,8 @@ h2 {
     float: left;
     margin: 0;
     padding: 0;
-    color: #FFF;
-    background-color: #000;
+    color: @white;
+    background-color: @color-background;
     -webkit-animation: pop 0.5s; /* Safari 4+ */
         -moz-animation: pop 0.5s; /* Fx 5+ */
              -o-animation: pop 0.5s; /* Opera 12+ */
@@ -154,65 +240,51 @@ h2 {
 a.doom {
     display: block;
     padding: 0;
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-
-    img {
-        display: block;
-        }
+    text-decoration: none;
+    margin: 10px;
 
     .pow_pow {
-        position: absolute;
+        // position: absolute;
         display: block;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: transparent;
-        z-index: 2;
-        -webkit-transition: all 0.1s linear;
-            -moz-transition: all 0.1s linear;
-               -ms-transition: all 0.1s linear;
-                  -o-transition: all 0.1s linear;
-                        transition: all 0.1s linear;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
 
-        .stoked {
-            display: none;
+        .responsive(@screen-small, {
+            height: 280px;
+        });
+    }
+    .stoked {
+        display: block;
+        padding:  4%;
+        color: @black;
+        background-color: @white;
+
+        h2 {
+            font-weight: 600;
+            font-size: 0.93em;
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
         }
 
-    }
+        .description {
+            font-family: @font-family-base;
+            font-size: 0.73em;
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
+        }
 
-    &:hover {
-
-        .pow_pow {
-            background: rgba(255,192,203,0.7);
-            color: #FFF;
-
-            .stoked {
-                display: block;
-                padding:  5%;
-                color: #FFF;
-                -webkit-transition: all 0.1s linear;
-                -moz-transition: all 0.1s linear;
-                -ms-transition: all 0.1s linear;
-                  -o-transition: all 0.1s linear;
-                        transition: all 0.1s linear;
-
-                h2 {
-                    font-weight: 600;
-                    text-decoration: underline;
-                }
-
-                .description {}
-
-                i {
-                    position: absolute;
-                    bottom: 18px;
-                    left: 50%;
-                    margin-left: -32px;
-                }
-            }
+        i {
+            position: absolute;
+            bottom: 18px;
+            left: 50%;
+            margin-left: -32px;
         }
     }
 }
@@ -227,94 +299,34 @@ a.doom {
         }
     }
 
-.kitten-parade {
-    background-image: url('http://images6.fanpop.com/image/photos/34800000/Kittens-3-animals-34865509-1680-1050.jpg');
+.buddyup {
+    background-image: url('images/buddyup/all_phones.jpg');
 }
-.puppy-parade {
-    // background-image: url('http://blog-photos.dogvacay.com/wp-content/uploads/2012/03/Puppy.jpg');
-    background-image: url('../../../img/all_phones.jpg');
+.yeti {
+    background-image: url('images/yeti/yeti-pattern.png');
+}
+.block-and-sons {
+    background-image: url('images/bandsco/block-and-sons-cover.jpg');
+}
+.detroit {
+    background-image: url('images/dd/demand-performance.jpg');
+}
+.freightliner {
+    background-image: url('images/ftl/70-years-of-innovation.jpg');
+}
+.bpd {
+    background-image: url('images/bpd/bpd_product_ipad.jpg');
+}
+.seed {
+    background-image: url('images/seed/map.jpg');
+}
+.skedco {
+    background-image: url('images/skedco/skedco-home.jpg');
+}
+.about {
+    background-image: url('images/about/john-skelton.jpg');
 }
 
-.garden {
-    width: 82%;
-    margin: auto;
-    h1 {
-            line-height: 2.05;
-    }
-    h2 {}
-
-    .box {
-        font-size: 1.25em;
-        line-height: 1.45;
-
-        &.size {}
-        &.sun {}
-        &.description {}
-    }
-
-    .garden_box_container {
-        display: block;
-        margin: 20px 0 60px 0;
-        table {
-            width: 100%;
-            height: 400px;
-            border: 4px solid #595044;
-            tr {
-                td {
-                    background-color: #669966;
-                    padding: 4px;
-                    border: 4px solid #595044;
-                    color: @white;
-                    text-align: center;
-                    border-radius: 8px;
-
-                    a {
-                        color: @white;
-                        font-weight: bold;
-                        text-decoration: none;
-                        padding: 0 8px;
-
-                        &:hover {
-                            background-color: @white;
-                            color: #669966;
-                        }
-                    }
-                    .vegetable {}
-                    .date {
-                        &.plant {
-                            text-transform: uppercase;
-                                font-size: 62%;
-                                font-weight: bold;
-                            &::before {
-                                content: 'Planted';
-                            }
-                        }
-                        &.seed {
-                            text-transform: uppercase;
-                                font-size: 62%;
-                                font-weight: bold;
-                            &::before {
-                                content: 'Seeded Indoors';
-                            }
-                        }
-                    }
-                }
-            }
-            &.two {
-                td {
-                    width: 50%;
-                }
-            }
-            &.three {
-                td {
-                    width: 33%;
-                }
-            }
-            &.four {
-                td {
-                    width: 25%;
-                }
-            }
-        }
-    }
+img {
+    display: block;
 }
